@@ -1,10 +1,17 @@
 <?php
-  include './header.php';
+    include './header.php';
+    if($_SERVER["REQUEST_METHOD"]== "POST"){
+        if(isset($_POST["submit"])){
+            header('Location: student_registration.php');
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    </script>
     <style>
       body,
       html {
@@ -95,16 +102,35 @@
           padding: 10px;
         }
       }
+      .mandatory{
+        color:red;
+      }
+      #instructions{
+        margin-top:140px;
+      }
+      .lines{
+        line-height:1.8;
+      }
     </style>
   </head>
   <body>
-    <!-- <h2>GUIDE SELECTION</h2> -->
-    <div class="bg-img"></div>
-    
-  </body>
-</html>
-<script>
-if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, window.location.href );
-}
-</script>
+    <div class="bg-img">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" class="container" id="instructions" method="post">   
+        
+            <h3><u>INSTRUCTIONS:</u></h3>
+            <div class="lines"> 
+            1. Maximum of two students can enroll in a project.<br>
+            2. If you are registering as a team, then only one person should register for the team.<br>
+            3. Please visit VIEW GUIDE LIST before selecting the guide.<br>
+            4. If you get Pop Up message "Guide Not Available" then choose another guide in the list.<br>
+            5. After successful registration, a pop up message "Successfully Registered" will be received.<br>
+            </div>
+            <br><br>
+            <input type="checkbox" id="agree" name="agree" value="agree" required>
+            <label for="agree"> I have read all the instructions<label>
+            <br><br>
+            <button type="submit" value="submit" name="submit" class="btn">SUBMIT</button>
+    </form>
+    </div>
+    </body>
+    </html>

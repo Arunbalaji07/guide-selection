@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>GUIDE SELECTION- IT DEPARTMENT- SIST </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
@@ -71,14 +72,9 @@
       <div class="header-right">
         <a class="active" href="./index.php">&nbsp&nbspHOME&nbsp&nbsp&nbsp&nbsp&nbsp</a>
         <a class="active" href="./guide_detail.php">VIEW GUIDE LIST </a>
+        <a class="active" href="./instructions.php">STUDENT REGISTRATION</a>
         <a class="active" href="./admin_login.php">ADMIN LOGIN</a>
       </div>
     </div>
-
-    <!-- <div style="padding-left: 20px">
-      <h1>Responsive Header</h1>
-      <p>Resize the browser window to see the effect.</p>
-      <p>Some content..</p>
-    </div> -->
   </body>
 </html>

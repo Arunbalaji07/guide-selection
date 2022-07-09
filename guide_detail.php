@@ -19,6 +19,7 @@
 
     <div class="products">
         <div class="container">
+            <a  class="active" href="./index.php">Back Home</a>
             <h1 class="lg-title">Guide Details</h1>
             
             <div class="product-items">
@@ -36,9 +37,9 @@
                             <h2 class="sm-title">STAFF:</h2>
 
                         </div>
-                        <a href="#" class="product-name">Dr.R.Subhashini, Professor and Head of Department,</a>
+                        <a href="#" class="product-name">Dr.R.Subhashini, Professor and Head of Department</a>
                         <h2 class="sm-title">DOMAIN:</h2>
-                        <a href="#" class="product-name">MACHINE LEARNING,DEEP LEARNING,</a>
+                        <a href="#" class="product-name">MACHINE LEARNING, DEEP LEARNING,</a>
 
                     </div>
 
@@ -59,9 +60,9 @@
                             <h2 class="sm-title">STAFF:</h2>
 
                         </div>
-                        <a href="#" class="product-name">Dr.S.Gowri ,Associate Professor</a>
+                        <a href="#" class="product-name">Dr.S.Gowri, Associate Professor</a>
                         <h2 class="sm-title">DOMAIN:</h2>
-                        <a href="#" class="product-name">Big Data, IoT,Data science,Informartion Science</a>
+                        <a href="#" class="product-name">Big Data, IoT,Data Science, Informartion Science</a>
 
                     </div>
                 </div>
@@ -80,7 +81,7 @@
                             <h2 class="sm-title">STAFF:</h2>
 
                         </div>
-                        <a href="#" class="product-name">Dr Jabez J ,Associate Professor</a>
+                        <a href="#" class="product-name">Dr Jabez J, Associate Professor</a>
                         <h2 class="sm-title">DOMAIN:</h2>
                         <a href="#" class="product-name">IoT, Artificial Intelligence, AR & VR</a>
 
@@ -101,7 +102,7 @@
                             <h2 class="sm-title">STAFF:</h2>
 
                         </div>
-                        <a href="#" class="product-name">NIRMALRANI V,ASSOCIATE PROFESSOR</a>
+                        <a href="#" class="product-name">NIRMALRANI V, ASSOCIATE PROFESSOR</a>
                         <h2 class="sm-title">DOMAIN:</h2>
                         <a href="#" class="product-name">Machine Learning, IoT, Data Science, Big Data</a>
 
@@ -124,9 +125,9 @@
                             <h2 class="sm-title">STAFF:</h2>
 
                         </div>
-                        <a href="#" class="product-name">Dr.S.Revathy,Associate Professor</a>
+                        <a href="#" class="product-name">Dr.S.Revathy, Associate Professor</a>
                         <h2 class="sm-title">DOMAIN:</h2>
-                        <a href="#" class="product-name">Machine Learning,Internet of Things,Data Analytics,Data
+                        <a href="#" class="product-name">Machine Learning, Internet of Things, Data Analytics, Data
                             Science</a>
 
                     </div>
@@ -146,7 +147,7 @@
                             <h2 class="sm-title">STAFF:</h2>
 
                         </div>
-                        <a href="#" class="product-name">Dr.L.Mary Gladence,Associate Professor</a>
+                        <a href="#" class="product-name">Dr.L.Mary Gladence, Associate Professor</a>
                         <h2 class="sm-title">DOMAIN:</h2>
                         <a href="#" class="product-name">Machine Learning, Artificial Intelligence, Data Science</a>
 
@@ -167,7 +168,7 @@
                             <h2 class="sm-title">STAFF:</h2>
 
                         </div>
-                        <a href="#" class="product-name">Dr P AJITHA ,Associate Professor</a>
+                        <a href="#" class="product-name">Dr P AJITHA , Associate Professor</a>
                         <h2 class="sm-title">DOMAIN:</h2>
                         <a href="#" class="product-name">Artificial Intelligence and Machine Learning, Data Science</a>
                     </div>
@@ -213,9 +214,9 @@
                             <h2 class="sm-title">STAFF:</h2>
 
                         </div>
-                        <a href="#" class="product-name">Dr.P.Jeyanthi ,Associate Professor</a>
+                        <a href="#" class="product-name">Dr.P.Jeyanthi, Associate Professor</a>
                         <h2 class="sm-title">DOMAIN:</h2>
-                        <a href="#" class="product-name">Image Processing, IOT, Data Mining ,Data Science,Deep
+                        <a href="#" class="product-name">Image Processing, IOT, Data Mining , Data Science, Deep
                             Learning</a>
 
                     </div>
@@ -237,9 +238,9 @@
                             <h2 class="sm-title">STAFF:</h2>
 
                         </div>
-                        <a href="#" class="product-name">Dr.R.M.Gomathi ,Associate Professor</a>
+                        <a href="#" class="product-name">Dr.R.M.Gomathi, Associate Professor</a>
                         <h2 class="sm-title">DOMAIN:</h2>
-                        <a href="#" class="product-name">Machine Learning, IoT, Wireless Sensor Network. AI</a>
+                        <a href="#" class="product-name">Machine Learning, IOT, Wireless Sensor Network, AI</a>
 
                     </div>
                 </div>
@@ -257,9 +258,9 @@
                         <div class="product-info-top">
                             <h2 class="sm-title">STAFF:</h2>
                         </div>
-                        <a href="#" class="product-name">Dr.Senduru Srinivasulu,Associate Professor</a>
+                        <a href="#" class="product-name">Dr.Senduru Srinivasulu, Associate Professor</a>
                         <h2 class="sm-title">DOMAIN:</h2>
-                        <a href="#" class="product-name">AI,ML, Data Mining</a>
+                        <a href="#" class="product-name">AI, ML, Data Mining</a>
 
                     </div>
                 </div>
@@ -275,7 +276,7 @@
                         <div class="product-info-top">
                             <h2 class="sm-title">STAFF:</h2>
                         </div>
-                        <a href="#" class="product-name">Dr.A.Sivasangari ,Associate Professor</a>
+                        <a href="#" class="product-name">Dr.A.Sivasangari, Associate Professor</a>
                         <h2 class="sm-title">DOMAIN:</h2>
                         <a href="#" class="product-name">IOT, AI, ML</a>
 
@@ -299,9 +300,9 @@
                             <h2 class="sm-title">STAFF:</h2>
 
                         </div>
-                        <a href="#" class="product-name">Dr.Brumancia ,Assistant Professor </a>
+                        <a href="#" class="product-name">Dr.Brumancia, Assistant Professor </a>
                         <h2 class="sm-title">DOMAIN:</h2>
-                        <a href="#" class="product-name">Data fusion, WSN, Mobile Computing</a>
+                        <a href="#" class="product-name">Data Fusion, WSN, Mobile Computing</a>
 
                     </div>
 
@@ -344,10 +345,29 @@
                             <h2 class="sm-title">STAFF:</h2>
 
                         </div>
-                        <a href="#" class="product-name">Dr.R.Jeberson Retna Raj,Associate Professor </a>
+                        <a href="#" class="product-name">Dr.R.Jeberson Retna Raj, Associate Professor </a>
                         <h2 class="sm-title">DOMAIN:</h2>
                         <a href="#" class="product-name">Bigdata Analytics, Blockchain, Computer Vision, IoT, Social
                             Network Analysis</a>
+
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="./assets/img/veeramuthu.jpg" alt="Dr. A. Veeramuthu ">
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="sm-title">STAFF:</h2>
+
+                        </div>
+                        <a href="#" class="product-name">Dr.A. Veeramuthu, Associate Professor </a>
+                        <h2 class="sm-title">DOMAIN:</h2>
+                        <a href="#" class="product-name">Data Mining, Image Processing , Programmingx</a>
 
                     </div>
                 </div>

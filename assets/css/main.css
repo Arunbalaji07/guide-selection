@@ -260,6 +260,19 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .download {
+    background-color: rgba(131, 18, 56, 1);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 8%;
+    right: 20px;
+    opacity: 0.9;
+    float: left;
+    margin-right: 45px;
+  }
+
   .flex {
     height: 60vh;
   }
