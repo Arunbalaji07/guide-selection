@@ -2,4 +2,4 @@
 
 GUIDE SELECTION SITE:
 
-This is a website for guide selection for the students of Department of IT, SIST.
+This is a website for students of Department of IT, SIST to choose guides(mentors) for the final year project.
