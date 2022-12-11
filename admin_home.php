@@ -255,6 +255,7 @@
                 <thead>
                     <tr>
                         <th style="width:50%">S.No</th>
+                        <th>PROJECT TITLE</th>
                         <th>STUDENT-1 NAME</th>
                         <th>REGISTER NUMBER</th>
                         <th>EMAIL</th>
@@ -270,7 +271,7 @@
                     $i=1;
                     while($count>0){
                         $row=mysqli_fetch_array($result);
-                        echo "<tr><td>".$i."</td><td>".$row["student_1_name"]."</td><td>".$row["student_1_reg_no"]."</td><td>".$row["student_1_email"]."</td><td>".$row["student_1_ph_no"]."</td><td>".$row["student_2_name"]."</td><td>".$row["student_2_reg_no"]."</td><td>".$row["student_2_email"]."</td><td>".$row["student_2_ph_no"]."</td></tr>";
+                        echo "<tr><td>".$i."</td><td>".$row["project_title"]."</td><td>".$row["student_1_name"]."</td><td>".$row["student_1_reg_no"]."</td><td>".$row["student_1_email"]."</td><td>".$row["student_1_ph_no"]."</td><td>".$row["student_2_name"]."</td><td>".$row["student_2_reg_no"]."</td><td>".$row["student_2_email"]."</td><td>".$row["student_2_ph_no"]."</td></tr>";
                         $count=$count-1;
                         $i=$i+1;
                     }

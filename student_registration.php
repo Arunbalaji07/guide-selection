@@ -4,7 +4,7 @@
     
     $member1_name=$member1_regno=$member1_email=$member1_phno="";
     $member2_name=$member2_regno=$member2_email=$member2_phno="";
-    $message=$sql_query1=$sql_query2=$sql_query3=$flag="";
+    $message=$sql_query1=$sql_query2=$sql_query3=$flag=$project_title="";
     if($_SERVER["REQUEST_METHOD"]== "POST"){
       #validating member-1 name
       $member1_name= test_input($_POST["member1_name"]);
@@ -20,6 +20,7 @@
         $member1_phno=test_input($_POST["member1_phno"]);
         $member1_email=test_input($_POST["member1_email"]);
         $guide_name=test_input($_POST["guide"]);
+        $project_title=test_input($_POST["project_title"]);
 
         $member2_name=test_input($_POST["member2_name"]);
         if(!(empty($member2_name))){
@@ -47,7 +48,7 @@
               echo "<script>alert('Guide Dr.R.Subhashini NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag="TRUE";
-              $sql_query2="INSERT INTO guide_subhashini(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_subhashini(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           #guide gowri
@@ -57,7 +58,7 @@
               echo "<script>alert('Guide Dr.S.Gowri NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag="TRUE";
-              $sql_query2="INSERT INTO guide_gowri(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_gowri(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           #guide jabez
@@ -67,7 +68,7 @@
               echo "<script>alert('Guide Dr.Jabez NOT AVAILABLE, Choose another guide!');</script>";}
             else{
               $flag="TRUE"; 
-              $sql_query2="INSERT INTO guide_jabez(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_jabez(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           #guide nirmalrani
@@ -77,7 +78,7 @@
               echo "<script>alert('Guide Dr.Nirmalrani V NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag="TRUE";
-              $sql_query2="INSERT INTO guide_nirmalrani(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_nirmalrani(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           #guide revathy
@@ -87,7 +88,7 @@
               echo "<script>alert('Guide Dr.S.Revathy NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag="TRUE";
-              $sql_query2="INSERT INTO guide_revathy(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_revathy(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           #guide mary gladence
@@ -98,7 +99,7 @@
               echo "<script>alert('Guide Dr.L.Mary Gladence NOT AVAILABLE, Choose another guide');</script>";}
             else{
                $flag="TRUE";
-              $sql_query2="INSERT INTO guide_marygladence(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_marygladence(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           #guide ajitha
@@ -108,7 +109,7 @@
               echo "<script>alert('Guide Dr.P.Ajitha NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag="TRUE";
-              $sql_query2="INSERT INTO guide_ajitha(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_ajitha(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           #guide bevish
@@ -118,7 +119,7 @@
               echo "<script>alert('Guide Dr.Y.Bevish Jinila NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag="TRUE";
-              $sql_query2="INSERT INTO guide_bevish(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_bevish(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           #guide ajitha
@@ -128,7 +129,7 @@
               echo "<script>alert('Guide Dr.P.Jeyanthi NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag="TRUE";
-              $sql_query2="INSERT INTO guide_jeyanthi(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_jeyanthi(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           #guide gomathi
@@ -138,7 +139,7 @@
               echo "<script>alert('Guide Dr.R.M.Gomathi NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag="TRUE";
-              $sql_query2="INSERT INTO guide_gomathi(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_gomathi(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           // #guide senduru srinivasulu
@@ -149,7 +150,7 @@
               echo "<script>alert('Guide Dr.Senduru Srinivasulu NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag="TRUE";
-              $sql_query2="INSERT INTO guide_sendurusrinivasulu(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_sendurusrinivasulu(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           
@@ -160,7 +161,7 @@
               echo "<script>alert('Guide Dr.A.Sivasangari NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag="TRUE";
-              $sql_query2="INSERT INTO guide_sivasangari(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_sivasangari(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           #guide brumancia
@@ -170,7 +171,7 @@
               echo "<script>alert('Guide Dr.Brumancia NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag="TRUE";
-              $sql_query2="INSERT INTO guide_brumancia(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_brumancia(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           #guide mathivanan
@@ -180,7 +181,7 @@
               echo "<script>alert('Guide Dr.G.Mathivanan NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag="TRUE";
-              $sql_query2="INSERT INTO guide_mathivanan(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_mathivanan(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }         
           #guide jeberson
@@ -190,7 +191,7 @@
               echo "<script>alert('Guide Dr.R.Jeberson Retna Raj NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag="TRUE";
-              $sql_query2="INSERT INTO guide_jeberson(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_jeberson(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           #guide veeramuthu
@@ -200,7 +201,7 @@
               echo "<script>alert('Guide Dr.A.Veeramuthu NOT AVAILABLE, Choose another guide');</script>";}
             else{
               $flag='TRUE';
-              $sql_query2="INSERT INTO guide_veeramuthu(id,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
+              $sql_query2="INSERT INTO guide_veeramuthu(id,project_title,student_1_name,student_1_reg_no,student_1_email,student_1_ph_no,student_2_name,student_2_reg_no,student_2_email,student_2_ph_no) VALUES (NULL,'$project_title','$member1_name','$member1_regno','$member1_email','$member1_phno','$member2_name','$member2_regno','$member2_email','$member2_phno')";
             }
           }
           if($flag==='TRUE'){
@@ -216,7 +217,7 @@
               echo "<script>alert('$message');</script>";
             }
             else{
-              $sql_query1="INSERT INTO registrations(id,guide_name,student_1_name,student_1_reg_no,student_1_ph_no,student_1_email,student_2_name,student_2_reg_no,student_2_ph_no,student_2_email) VALUES (NULL,'$guide_name','$member1_name','$member1_regno','$member1_phno','$member1_email','$member2_name','$member2_regno','$member2_phno','$member2_email')";
+              $sql_query1="INSERT INTO registrations(id,guide_name,project_title,student_1_name,student_1_reg_no,student_1_ph_no,student_1_email,student_2_name,student_2_reg_no,student_2_ph_no,student_2_email) VALUES (NULL,'$guide_name','$project_title','$member1_name','$member1_regno','$member1_phno','$member1_email','$member2_name','$member2_regno','$member2_phno','$member2_email')";
 
             
               if((!(empty($sql_query2)))){
@@ -362,20 +363,20 @@
           <label for="guide"><b>Select Guide <span class="mandatory">*</span></</b></label>
           <select name="guide" id="guide" required>
             <option value="" disabled selected>Select Guide</option>
-            <option value="Dr.R.Subhashini">Dr.R.Subhashini</option>
-            <option value="Dr.S.Gowri">Dr.S.Gowri</option>
-            <option value="Dr.Jabez">Dr Jabez J</option>
-            <option value="Dr.Nirmalrani V">Dr.Nirmalrani V</option>
+            <option value="Dr.R.Subhashini" disabled selected>Dr.R.Subhashini</option>
+            <option value="Dr.S.Gowri" disabled selected>Dr.S.Gowri</option>
+            <option value="Dr.Jabez" disabled selected>Dr Jabez J</option>
+            <option value="Dr.Nirmalrani V" disabled selected>Dr.Nirmalrani V</option>
             <option value="Dr.S.Revathy">Dr.S.Revathy</option>
             <option value="Dr.L.Mary Gladence">Dr.L.Mary Gladence</option>
-            <option value="Dr.P.Ajitha">Dr P Ajitha</option>
-            <option value="Dr.Y.Bevish Jinila">Dr.Y.Bevish jinila</option>
+            <option value="Dr.P.Ajitha" disabled selected>Dr P Ajitha</option>
+            <option value="Dr.Y.Bevish Jinila" disabled selected>Dr.Y.Bevish jinila</option>
             <option value="Dr.P.Jeyanthi">Dr.P.Jeyanthi</option>
-            <option value="Dr.R.M.Gomathi">Dr.R.M.Gomathi</option>
-            <option value="Dr.Senduru Srinivasulu">Dr.Senduru Srinivasulu</option>
-            <option value="Dr.A.Sivasangari">Dr.A.Sivasangari</option>
+            <option value="Dr.R.M.Gomathi" disabled selected>Dr.R.M.Gomathi</option>
+            <option value="Dr.Senduru Srinivasulu" disabled selected>Dr.Senduru Srinivasulu</option>
+            <option value="Dr.A.Sivasangari" disabled selected>Dr.A.Sivasangari</option>
             <option value="Dr.Brumancia">Dr. Brumancia</option>
-            <option value="Dr.G.Mathivanan">Dr.G.Mathivanan</option>
+            <option value="Dr.G.Mathivanan" disabled selected>Dr.G.Mathivanan</option>
             <option value="Dr.R.Jeberson Retna Raj">
               Dr.R.Jeberson Retna Raj
             </option>
@@ -394,7 +395,10 @@
           <input type="text" placeholder="Enter phone number" name="member2_phno" minlength="10" maxlength="10" autocomplete="off"/>
 
           <label for="member2_email"><b>Mail ID</b></label>
-          <input type="email" placeholder="Enter email" name="member2_email" autocomplete="off"/>          
+          <input type="email" placeholder="Enter email" name="member2_email" autocomplete="off"/>
+          
+          <label for="project_title"><b>Project Title <span class="mandatory">*</span></b></label>
+          <input type="text" placeholder="Enter project title" name="project_title" autocomplete="off" required/>
 
         </div>
         <button type="submit" value="submit" name="submit" class="btn">REGISTER</button>
