@@ -1,6 +1,5 @@
 <?php
     include './dbconnect.php';
-    // include './home_header.php';
     include './nav_bar_admin.php';
     // session_start();
     $guide_name=$count="";
@@ -19,7 +18,7 @@
         $guide_name="Dr.R. Subhashini";
         $sql="SELECT * FROM guide_subhashini";
         $result=mysqli_query($con,$sql);
-        $count=$result->num_rows;   
+        $count=$result->num_rows;  
     }
     if($_SESSION['email']=='gowri.it@sathyabama.ac.in'){
         $guide_name="Dr.S.Gowri";
@@ -115,82 +114,8 @@
 ?>
 <!DOCTYPE html>
 <html>
-
-<head>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="./assets/js/table2excel.js" type="text/javascript">
-    </script>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-
-        }
-
-        .header {
-            font-family: "Roboto", sans-serif;
-            font-weight: bold;
-            overflow: hidden;
-            padding: 20px 10px;
-            background-color: rgba(131, 18, 56, 1);
-        }
-
-        .header a {
-            float: left;
-            color: black;
-            text-align: center;
-            padding: 12px;
-            text-decoration: none;
-            font-size: 17px;
-            line-height: 40px;
-            border-radius: 4px;
-        }
-
-        .header img.logo {
-            height: 75px;
-            padding-left: 20px;
-        }
-
-        .header a.active{
-            color: white;
-        }
-
-        .header a.active:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .header-right {
-            float: right;
-        }
-
-        @media screen and (max-width: 500px) {
-            .header a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-
-            .header-right {
-                float: none;
-            }
-        }
-    </style>-->
-
-    <!-- <div class="header">
-        <img class="logo" src="./assets/img/sistlogo.jpg" alt="logo" />
-        <div class="header-right">
-            <a class="active" href="./logout.php">LOGOUT </a>
-
-        </div>
-    </div> -->
-
-
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <style>
         body,
         html {
@@ -199,26 +124,26 @@
             
         }
 
-        /* * {
+        * {
             box-sizing: border-box;
-        } */
+        }
 
         th,td{
             border-collapse: collapse;
-            /* margin-left: auto;  */
+            margin-left: auto; 
             margin-right: auto;
             border:3px solid black;
             text-align: center;
-            /* width:20%; */
-            padding:5px;
+            width:50%;
+            padding:20px;
         }
         table{
             border-collapse: collapse;
-            /* margin-left: 20%;  */
-            margin-right: auto;
+            margin-left: auto; 
+            margin-right: 5%;
             border:3px solid black;
             text-align: center;
-            width:30%;
+            width:50%;
         }
         th{
             padding:10px;
@@ -241,83 +166,81 @@
             float: right;
             margin-right: 45px;
         }
-        
-        .container {
-            /*border-radius: 5px;*/
-            /* background-color: #f2f2f2; */
-            padding: 2px;
-            /* padding-left: 0%; */
-            margin-top: 5%;
-            /* margin-right: 15%; */
-            margin-left: 15%;
-            /* padding-top:30%; */
-            width: 80%;
-            /* background:yellow; */
-            }
-        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other  */
-        @media screen and (max-width: 800px) {
-        .col-25,
-        .col-75,
-        input[type="submit"] {
-            width: 100%;
-            margin-top: 0;
-        }
-        .container {
-            /* background-color: #f2f2f2; */
-            padding: 20px;
-            margin-top: 15%;
-            margin-right: 15%;
-            margin-left: 35%;
-            width: 40%;
-        }
-        }
     </style>
     </head>
 
 
     <body>
         <br>
-        <div class="container">
-            <button type="submit" name="downloadexcel" id="downloadexcel" class="open-button">Download Excel File</button>
-            <h2 padding-left:15%> Staff Name: <?php echo $guide_name?></h2><br><br>
-            <h3> LIST OF TEAMS</h3>
-            <div style="overflow-x:auto;"> 
-                
-                <table class="table" id="table" >
-                    <thead>
-                        <tr>
-                            <th style=>S.No</th>
-                            <th>PROJECT TITLE</th>
-                            <th>STUDENT-1 NAME</th>
-                            <th>REGISTER NUMBER</th>
-                            <th>EMAIL</th>
-                            <th>PHONE NUMBER</th>
-                            <th>STUDENT-2 NAME</th>
-                            <th>REGISTER NUMBER</th>
-                            <th>EMAIL</th>
-                            <th>PHONE NUMBER</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $i=1;
-                        while($count>0){
-                            $row=mysqli_fetch_array($result);
-                            echo "<tr><td>".$i."</td><td>".$row["project_title"]."</td><td>".$row["student_1_name"]."</td><td>".$row["student_1_reg_no"]."</td><td>".$row["student_1_email"]."</td><td>".$row["student_1_ph_no"]."</td><td>".$row["student_2_name"]."</td><td>".$row["student_2_reg_no"]."</td><td>".$row["student_2_email"]."</td><td>".$row["student_2_ph_no"]."</td></tr>";
-                            $count=$count-1;
+        <!-- <button type="submit" name="downloadexcel" id="downloadexcel" class="open-button">Download Excel File</button> -->
+        <h3> LIST OF STUDENTS</h3>
+        <div style="overflow-x:auto;">
+            <table class="table" id="table" width=70%>
+                <thead>
+                    <tr>
+                        <th style="width:50%">S.No</th>
+                        <th>STUDENT NAME</th>
+                        <th>REGISTER NUMBER</th>
+                        <th>PROJECT TITLE</th>
+                        <th>PPT</th>
+                        <th>REPORT</th>
+                        <th>DEMO</th>
+                        <th>APPROVE STATUS</th>
+                        <th>APPROVE </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $i=1;
+                    while($count>0){
+                        $row=mysqli_fetch_array($result);
+                        $sql1="SELECT * FROM student_credentials WHERE reg_no=$row[student_1_reg_no]";
+                        $result1=mysqli_query($con,$sql1);
+                        if(!$result1){
+                            echo "error";
+                        }
+                        else{
+                        $row2=mysqli_fetch_array($result1);
+                        $count1=$result1->num_rows;
+                        while($count1>0){
+                            $reg_no=$row2["reg_no"];
+                            echo "<tr>
+                            <td>".$i."</td>
+                            <td>".$row2["name"]."</td>
+                            <td>".$row2["reg_no"]."</td>
+                            <td>".$row["project_title"]."</td>
+                            <td>"."<a href='./uploads/ppt/".$row2["ppt"]."' target='_blank'>".$row2["ppt"]."</a>"."</td>
+                            <td>"."<a href='./uploads/report/".$row2["report"]."' target='_blank'>".$row2["report"]."</a>"."</td>
+                            <td>"."<a href='./uploads/demo/".$row2["demo"]."' target='_blank'>".$row2["demo"]."</a>"."</td>
+                            <td>".$row2["approval_status"]."</td>
+                             <td><button type='submit' name='submit_1' value='submit_1' class='approval'
+                            id='approval'>Approve</button> </td></tr>";
+                            $count1= $count1-1;
                             $i=$i+1;
                         }
+                    }
+                        $sql1="SELECT * FROM student_credentials WHERE reg_no=$row[student_2_reg_no]";
+                        $result1=mysqli_query($con,$sql1);
+                        if($result1){
+                        $row2=mysqli_fetch_array($result1);
+                        $count1=$result1->num_rows;
+                        while($count1>0){
+                             echo "<tr><td>".$i."</td><td>".$row2["name"]."</td><td class='reg_no'>".$row2["reg_no"]."</td><td>".$row["project_title"]."</td><td>"."<a href='./uploads/ppt/".$row2["ppt"]."' target='_blank'>".$row2["ppt"]."</a>"."</td><td>"."<a href='./uploads/report/".$row2["report"]." target='_blank'>".$row2["report"]."</td><td>"."<a href='./uploads/demo/".$row2["demo"]."' target='_blank'>".$row2["demo"]."</a>"."</td><td>".$row2["approval_status"]."</td><td> <button type='submit' name='submit' value='submit'
+                             id='approval'
+                             class='approval'>Approve</button> </td></tr>";
+                            $count1= $count1-1;
+                            $i=$i+1;
+                            
+                        }
+                    }
+                        $count=$count-1;
+                        $i=$i+1;
                     
-                    ?>
+                    }?>
 
                 </tbody>
             </table>
-            <div>
         </div>
-
-    </body>
-
-</body>
 </body>
 
 </html>
@@ -326,8 +249,37 @@
         var table2excel= new Table2Excel();
         table2excel.export(document.querySelectorAll("#table"));
     });
+    // document.getElementById('approval').addEventListener('click',function(){
+    //     var currentRow=$(this).closest("tr");
+    //         var reg_no=currentRow.find("td:eq(0)").text();
+    //         alert(reg_no);
+    // });
 
     if ( window.history.replaceState ) {
     window.history.replaceState( null, null, window.location.href );
     }
+</script>
+<script>
+    $(document).ready(function(){
+        $("#approval").on('click',function(){
+            var currentRow=$(this).closest("tr");
+            var reg_no=currentRow.find("td:eq(2)").text();
+            var data={};
+            data.reg_no=reg_no;
+            alert(reg_no);
+            $.ajax({
+                url:"./approve.php",
+                method:"post",
+                data: data,
+                success: function(data){
+                    alert(data);
+                },
+                error:function(){
+                    alert('Failed');
+                }
+            })
+
+        });
+    });
+    
 </script>

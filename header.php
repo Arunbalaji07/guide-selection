@@ -74,6 +74,7 @@
         <a class="active" href="./guide_detail.php">VIEW GUIDE LIST </a>
         <a class="active" href="./instructions.php">STUDENT REGISTRATION</a>
         <a class="active" href="./admin_login.php">ADMIN LOGIN</a>
+        <a class="active" href="./student_login.php">STUDENT LOGIN</a>
       </div>
     </div>
   </body>

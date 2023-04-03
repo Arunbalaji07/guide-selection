@@ -1,7 +1,7 @@
 <?php
     $servername='localhost';
     $username='root';
-    $password='';
+    $password='MySQL#password';
     $dbname='guide_selection';
     $con=mysqli_connect($servername,$username,$password,$dbname);
     if(!$con){

@@ -351,16 +351,16 @@
           <label for="member1_name"><b>Team Member-1 Name <span class="mandatory">*</span></b></label>
           <input type="text" placeholder="Enter name" name="member1_name" autocomplete="off" required />
 
-          <label for="member1_regno"><b>Register Number <span class="mandatory">*</span></</b></label>
+          <label for="member1_regno"><b>Register Number <span class="mandatory">*</span></b></label>
           <input type="text" placeholder="Enter register number" name="member1_regno" minlength="8" maxlength="8" autocomplete="off" required />
 
-          <label for="member1_phno"><b>Phone Number <span class="mandatory">*</span></</b></label>
+          <label for="member1_phno"><b>Phone Number <span class="mandatory">*</span></b></label>
           <input type="text" placeholder="Enter phone number" name="member1_phno" minlength="10" maxlength="10" autocomplete="off" required />
 
-          <label for="member1_email"><b>Mail ID <span class="mandatory">*</span></</b></label>
+          <label for="member1_email"><b>Mail ID <span class="mandatory">*</span></b></label>
           <input type="email" placeholder="Enter email" name="member1_email" autocomplete="off" required />    
 
-          <label for="guide"><b>Select Guide <span class="mandatory">*</span></</b></label>
+          <label for="guide"><b>Select Guide <span class="mandatory">*</span></b></label>
           <select name="guide" id="guide" required>
             <option value="" disabled selected>Select Guide</option>
             <option value="Dr.R.Subhashini" disabled selected>Dr.R.Subhashini</option>

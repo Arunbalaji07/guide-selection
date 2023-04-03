@@ -1,5 +1,6 @@
 <?php
     include './dbconnect.php';
+    // include './nav_bar_admin.php';
     session_start();
     $guide_name=$count="";
     if(!(isset($_SESSION['logged_in']))){
@@ -10,7 +11,8 @@
     }
     $email=isset($_SESSION['email'])?$_SESSION['email']:'';
     // $record=mysqli_query($con,"SELECT * FROM registrations ");
-    $sql="SELECT * FROM registrations ORDER BY guide_name";
+    // $sql="SELECT * FROM registrations ORDER BY guide_name";
+    $sql="SELECT * FROM student_credentials ORDER BY guide_name";
     $result=mysqli_query($con,$sql);
     $count=$result->num_rows;  
     ?>
@@ -157,17 +159,20 @@
             <table class="table" id="table" >
                 <thead>
                     <tr>
-                        <th style="width:50%">S.No</th>
-                        <th>GUIDE NAME</th>
+                        <th>S.No</th>
                         <th>STUDENT NAME</th>
                         <th>REGISTER NUMBER</th>
-                        <th>EMAIL</th>
+                        <th>GUIDE NAME</th>
+                        <th>PROJECT TITLE</th>
+                        <th>PPT</th>
+                        <th>REPORT</th>
+                        <th>DEMO</th>
+                        <th>APPROVAL STATUS</th>
+                        <!-- <th>EMAIL</th>
                         <th>PHONE NUMBER</th>
                         <th>TEAM MATE</th>
-                        <!-- <th>STUDENT NAME</th> -->
-                        <th>REGISTER NUMBER</th>
-                        <th>EMAIL</th>
-                        <th>PHONE NUMBER</th>
+                        <th>STUDENT NAME</th>
+                        <th>REGISTER NUMBER</th> -->
                         
                     </tr>
                 </thead>
@@ -176,7 +181,16 @@
                     $i=1;
                     while($count>0){
                         $row=mysqli_fetch_array($result);
-                        echo "<tr><td>".$i."</td><td>".$row["project_title"]."</td><td>".$row["guide_name"]."</td><td>".$row["student_1_name"]."</td><td>".$row["student_1_reg_no"]."</td><td>".$row["student_1_email"]."</td><td>".$row["student_1_ph_no"]."</td><td>".$row["student_2_name"]."</td><td>".$row["student_2_reg_no"]."</td><td>".$row["student_2_email"]."</td><td>".$row["student_2_ph_no"]."</td></tr>";
+                        echo "<tr>
+                            <td>".$i."</td>
+                            <td>".$row["name"]."</td>
+                            <td>".$row["reg_no"]."</td>
+                            <td>".$row["guide_name"]."</td>
+                            <td>".$row["project_title"]."</td>
+                            <td>"."<a href='./uploads/ppt/".$row["ppt"]."' target='_blank'>".$row["ppt"]."</a>"."</td>
+                            <td>"."<a href='./uploads/report/".$row["report"]."' target='_blank'>".$row["report"]."</a>"."</td>
+                            <td>"."<a href='./uploads/demo/".$row["demo"]."' target='_blank'>".$row["demo"]."</a>"."</td>
+                            <td>".$row["approval_status"]."</tr>";
                         $count=$count-1;
                         $i=$i+1;
                     }
