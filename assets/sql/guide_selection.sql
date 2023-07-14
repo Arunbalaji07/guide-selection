@@ -34,12 +34,11 @@ CREATE TABLE `admin_credentials` (
   `password` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
 -- Dumping data for table `admin_credentials`
 --
 
 INSERT INTO `admin_credentials` (`id`, `email`, `password`) VALUES
-(1, 'subhashini.it@sathyabama.ac.in', '9f43a564be865b9edc8eaf876595facd'),
+(1, 'subhashini.it@sathyabama.ac.in', '21232f297a57a5a743894a0e4a801fc3'),
 (2, 'gowri.it@sathyabama.ac.in', '7b47a887c9c718ad9a06bb864809d8ce'),
 (3, 'jebersonretnaraj.it@sathyabama.ac.in', '54b792c32402fe1aa7a219ef97411d8d'),
 (4, 'marygladence.it@sathyabama.ac.in', 'e3a05b74ed7ff7a02cabaea6aa9916c2'),
@@ -59,6 +58,21 @@ INSERT INTO `admin_credentials` (`id`, `email`, `password`) VALUES
 (23, 'sendurusrinivasulu.it@sathyabama.ac.in', 'b4c32bb7e16f6cc81689e81e33444bfb');
 
 -- --------------------------------------------------------
+
+-- Table structure for `student_credentials`
+
+CREATE TABLE `student_credentials` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `reg_no` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(250) NOT NULL
+);
+
+-- Dumping data for table `student_credentials`
+
+INSERT INTO `student_credentials` (`id`, `name`,`reg_no`, `email`, `password`) VALUES 
+(1, 'Arun', 41120028 ,'arun@gmail.com', '21232f297a57a5a743894a0e4a801fc3' );
 
 --
 -- Table structure for table `guide_ajitha`
